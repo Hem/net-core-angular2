@@ -240,3 +240,10 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+#
+/src/Web/angular2app/**/*.js
+/src/Web/angular2app/**/*.js.map
+/src/Web/wwwroot/app/**/*.*
+/src/Web/wwwroot/js/**/*.*
+/src/Web/wwwroot/styles/**/*.*

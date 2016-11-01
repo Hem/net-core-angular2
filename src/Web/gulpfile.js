@@ -79,7 +79,6 @@ gulp.task('copy-allOther', function () {
         .pipe(gulp.dest(buildConfig.rootJsFolder));
 });
 
-
 gulp.task('copy-styles', function (done) {
     runSeq('copy-bootstrap', done);
 });
@@ -87,4 +86,14 @@ gulp.task('copy-styles', function (done) {
 gulp.task('copy-bootstrap', function () {
     return gulp.src(buildConfig.sources.bootstrap)
         .pipe(gulp.dest(buildConfig.rootCssFolder + "bootstrap/"));
+});
+
+
+// watch for changes and then copy the files over!!!
+gulp.task('start-watch', function () {
+    gulp.watch([
+       './angular2app/**/*.js',
+       './angular2app/**/*.html',
+       './angular2app/**/*.css',
+    ], ['copy-app']);
 });
